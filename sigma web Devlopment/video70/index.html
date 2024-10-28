@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise - 12</title>
+    <style>
+        .container {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .box {
+            height: 60px;
+            width: 60px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="pink" class="box">Box1</div>
+        <div id="green" class="box">Box2</div>
+        <div id="blue" class="box">Box3</div>
+        <div id="purple" class="box">Box4</div>
+        <div id="orange" class="box">Box5</div>
+    </div>
+
+    <p>hii ia ama paragraph . </p>
+
+    <script>
+        console.log("Script.js initializing")
+        // let boxes = document.getElementsByClassName("box")
+        let boxes = document.querySelector(".container").children
+
+        function getRandomColor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+        Array.from(boxes).forEach(e => {
+            e.style.backgroundColor = getRandomColor()
+            e.style.color = getRandomColor()
+        })
+        // Example: Set the background color of a paragraph element
+        document.querySelector("p").style.backgroundColor = randomColor;
+
+    </script>
+</body>
+
+</html>

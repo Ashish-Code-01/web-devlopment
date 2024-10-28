@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s all ease-in-out;
+}
+
+.heart {
+    transition: 0.9s all ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    height: 700px;
+    width: 400px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+p {
+    display: none;
+}
+
+.heart div {
+    margin-bottom: 30px;
+    font-size: 16px;
+
+}
+
+
+.heart2 {
+    font-size: 7rem;
+    animation: ashu 1s linear 0.2s infinite alternate;
+}
+
+@keyframes ashu {
+    0% {
+        transform: scale(0.25);
+    }
+
+    50% {
+        transform: scale(0.75);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+
+}
